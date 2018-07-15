@@ -4,5 +4,6 @@ class Show < ActiveRecord::Base
 
   def build_network(call_letters)
     network = Network.new(call_letters)
+    network.shows << self
   end
 end
